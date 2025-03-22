@@ -8,11 +8,12 @@
 
     <link rel="stylesheet" href="css/bootstrap.css">
 
+    <script src="js/funcoes.js"></script>
     <title>Loja</title>
 </head>
 <body>
     <div class="container">
-        <h1>Lojinha Borges</h1>
+        <h1 class="bi bi-cart-check">Lojinha Borges</h1>
 
     <table class="table table-hover"> <!-- Tabela -->
 
@@ -43,15 +44,15 @@
                         Cor: RED
                     </div>
                 </td>
-                <td>
+                <td id="valor1">
                     R$ 2.324,00
                 </td>
                 <td>
-                    <span class="badge bg-danger"> - </span>
-                    0
-                    <span class="badge bg-success"> + </span>
+                    <span class="badge bg-danger"><i class="bi bi-bag-dash"></i></span>
+                    <span id="qtd1">0</span>
+                    <span class="badge bg-success" onclick="adicionar(1)"><i class="bi bi-bag-plus"></i></span>
                 </td>
-                <td></td>
+                <td id="total1">0</td>
             </tr>
             <tr>
                 <td>
@@ -68,15 +69,17 @@
                         Cor: ESTELAR
                     </div>
                 </td>
-                <td>
+                <td id="valor2">
                     R$ 4.154,00
                 </td>
                 <td>
-                    <span class="badge bg-danger"> - </span>
-                    0
-                    <span class="badge bg-success"> + </span>
+                    <span class="badge bg-danger"><i class="bi bi-bag-dash"></i></span>
+                    <span id="qtd2">0</span>
+                    <span class="badge bg-success" onclick="adicionar(2)"><i class="bi bi-bag-plus"></i></span>
                 </td>
-                <td></td>
+                <td id="total2">
+                    0
+                </td>
             </tr>
             <tr>
                 <td>
@@ -87,21 +90,25 @@
                     <div>64GB</div>
                     <div>Cor: ULTRAMARINO</div>
                 </td>
-                <td>
+                <td id="valor3">
                     R$ 5.420,00
                 </td>
                 <td>
-                    <span class="badge bg-danger"> - </span>
-                    0
-                    <span class="badge bg-success"> + </span>
+                    <span class="badge bg-danger"><i class="bi bi-bag-dash"></i></span>
+                    <span id="qtd3">0</span>
+                    <span class="badge bg-success" onclick="adicionar(3)"><i class="bi bi-bag-plus"></i></span>
                 </td>
-                <td></td>
+                <td id="total3">
+                    0
+                </td>
             </tr>
         </tbody>
     </table>
 
-    <footer>
-        <span>Subtotal: R$ 0,00</span>
+    <footer class="text-center">
+        <span><i class="bi bi-cash-coin"></i>
+            Subtotal: R$ 0,00
+        </span>
     </footer>
     </div>
 </body>
